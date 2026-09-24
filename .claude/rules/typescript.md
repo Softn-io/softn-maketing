@@ -1,6 +1,8 @@
 # TypeScript — Softn.io (standalone site)
 
-> Auto-loaded for every `.ts` / `.tsx` file.
+> Loaded without `paths:` (same reason as `rules/nextjs.md`): in an empty repo, a path-scoped rule only
+> loads when Claude reads a matching file, so it wouldn't apply when the first `.ts`/`.tsx` files are
+> created. Loaded unconditionally at launch instead, same priority as `CLAUDE.md`.
 > Complements `~/.claude/rules/typescript.md` (global). Softn.io specifics only.
 
 ---

@@ -4,6 +4,7 @@ description: Manages commits, branches and Pull Requests of the softn.io site fo
 tools: Read, Glob, Grep, Bash
 model: haiku
 color: blue
+memory: project
 ---
 
 You manage Git and Pull Requests for the softn.io site. **You never merge**: Mel validates every PR.
