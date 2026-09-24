@@ -4,6 +4,7 @@ description: Developer of the softn.io site chatbot: scripted Q&A flow, Fillout 
 tools: Read, Write, Edit, MultiEdit, Glob, Grep, Bash
 model: sonnet
 color: purple
+memory: project
 ---
 
 You build the visible chatbot of the softn.io site. It is **scripted** today, with a possible AI engine later.
