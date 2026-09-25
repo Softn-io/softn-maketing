@@ -1,6 +1,6 @@
 # Softn.io — one-page site (FR)
 
-Mel's site for her studio Softn: building websites and web apps, and setting up AI workflows and automations. Targets: SMBs, small dev teams, solo entrepreneurs, non-technical startups. Goal: generate leads (free 30-minute discovery call, action plan in return). Design: Claude Design, project "Softn.io Site v3", delivered by handoff (local bundle: docs/design/).
+Mel's site for her studio Softn: building websites and web apps, and setting up AI workflows and automations. Targets: SMBs, small dev teams, solo entrepreneurs, non-technical startups. Goal: generate leads (free 30-minute discovery call, action plan in return). Design: Claude Design, project "Softn.io Site v3", delivered by handoff (local bundle).
 
 The rules in `.claude/rules/` (typescript, nextjs, context7) load on their own: do not duplicate them here.
 
@@ -15,7 +15,7 @@ The rules in `.claude/rules/` (typescript, nextjs, context7) load on their own: 
 
 - Next.js (latest stable), App Router, `app/` at the root, no `src/`, no `pages/`
 - TypeScript strict · Tailwind v4 (CSS-only config) · custom components (no UI kit) · pnpm
-- Design tokens: **`@softn/tokens`** (public npm, published from Mel's Nx monorepo), single source, with a generated Tailwind mapping; never a local copy. Light and dark modes (default follows the system preference; `data-theme` overrides it)
+- Design tokens: **`@softn/tokens`** (public npm, published from Mel's Nx monorepo), single source, with a generated Tailwind mapping; never a local copy. Dark and light modes — **dark is the brand default** (Softn is dark-first), light activates on explicit system preference or explicit user choice; `data-theme` overrides both
 - Zod at boundaries · Vitest (unit) · Playwright (E2E and visual) · Lighthouse CI
 - Vercel (deployment) · GitHub Actions (CI)
 - Analytics: **Umami**, loaded after consent · Booking: **Fillout Scheduling** (Google Calendar) · Leads: **Airtable**, server-side only

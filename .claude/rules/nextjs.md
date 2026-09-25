@@ -50,9 +50,9 @@ Colors, radii, spacing, typography and z-index go through `--softn-*` CSS variab
 
 ## Theming
 
-- Two modes, **light and dark**. **The default follows the system preference** (`prefers-color-scheme`), in CSS, so the page is right without JavaScript.
+- Two modes, **dark and light**. **Dark is the brand default** — Softn's identity is dark-first, light exists to accommodate people who need or prefer it. In CSS, the page is dark unless the system explicitly prefers light or the user explicitly chooses light; a system with no stated preference (or no `prefers-color-scheme` support) stays dark. No JavaScript needed for correctness.
 - `data-theme` on `<html>` (`light` or `dark`) overrides it: set it only when the user makes an explicit choice, and leave it absent otherwise.
-- Prefer theme tokens: they switch on their own. The `dark:` variant exists for exceptions.
+- Prefer theme tokens: they switch on their own. `dark:` and `light:` variants exist for exceptions — since dark is the default, most exception styling needs `light:`, not `dark:`.
 - An explicit user choice must be applied before first paint (no flash of the wrong theme).
 
 ## Strict Tailwind
