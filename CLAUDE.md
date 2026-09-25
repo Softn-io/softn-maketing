@@ -15,7 +15,7 @@ The rules in `.claude/rules/` (typescript, nextjs, context7) load on their own: 
 
 - Next.js (latest stable), App Router, `app/` at the root, no `src/`, no `pages/`
 - TypeScript strict · Tailwind v4 (CSS-only config) · custom components (no UI kit) · pnpm
-- Design tokens: **`@softn/tokens`** (public npm, published from Mel's Nx monorepo), single source, with a generated Tailwind mapping; never a local copy. Dark and light modes — **dark is the brand default** (Softn is dark-first), light activates on explicit system preference or explicit user choice; `data-theme` overrides both
+- Design tokens: **`@softnio-labs/tokens`** (public npm, published from Mel's Nx monorepo), single source, with a generated Tailwind mapping; never a local copy. Dark and light modes — **dark is the brand default** (Softn is dark-first), light activates on explicit system preference or explicit user choice; `data-theme` overrides both
 - Zod at boundaries · Vitest (unit) · Playwright (E2E and visual) · Lighthouse CI
 - Vercel (deployment) · GitHub Actions (CI)
 - Analytics: **Umami**, loaded after consent · Booking: **Fillout Scheduling** (Google Calendar) · Leads: **Airtable**, server-side only
@@ -47,7 +47,7 @@ Target scripts, to be created at project init (do not invent other names):
 
 ## Dependencies
 
-A hook blocks `pnpm add` and equivalents. Every dependency goes through a **"Dependency request"** raised to `/ship`, which submits it to Mel (package + version, justification, alternatives including "no dependency", size, license, advisories, personal data). Anticipated candidates, to be validated: `@softn/tokens`, `zod`, `@fillout/react`, `vitest`, `@playwright/test`, `@lhci/cli`, `next-intl` (later).
+A hook blocks `pnpm add` and equivalents. Every dependency goes through a **"Dependency request"** raised to `/ship`, which submits it to Mel (package + version, justification, alternatives including "no dependency", size, license, advisories, personal data). Anticipated candidates, to be validated: `@softnio-labs/tokens`, `zod`, `@fillout/react`, `vitest`, `@playwright/test`, `@lhci/cli`, `next-intl` (later).
 
 ## Content
 
@@ -91,7 +91,7 @@ The hooks and permissions in `settings.json` apply to the main session. Check th
 - Reading or writing any `.env*` (except `.env.example`)
 - Adding a dependency without validation · using npm, yarn or bun
 - `middleware.ts`, `pages/`, `tailwind.config.*`, arbitrary Tailwind values, hardcoded colors
-- Redefining or duplicating a `--softn-*` token in the site (it lives in `@softn/tokens`)
+- Redefining or duplicating a `--softn-*` token in the site (it lives in `@softnio-labs/tokens`)
 - Tailwind default colors, font sizes, shadows or radii that Softn does not redefine (`bg-white`, `text-lg`, `shadow-xl`, `rounded-2xl`, `bg-gray-*`): the package resets them and such a class generates nothing
 - Hardcoded text in a component · publishing unvalidated copy
 - Merging, `push --force`, committing directly to `main` or `develop`
